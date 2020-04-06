@@ -1,0 +1,14 @@
+#https://github.com/kevinzg/facebook-scraper
+
+
+from facebook_scraper import get_posts
+
+for post in get_posts(group = 'python', pages=10, extra_info = True):
+    print(post['text'])
+    print('Likes: ', post['likes'])
+    print('Shares: ', post['shares'])
+    print('Image: ', post['image'])
+    print('Post URL: ', post['post_url'])
+    print('Link: ', post['link'])
+    print('Post ID: ', post['post_id'])
+    print()
